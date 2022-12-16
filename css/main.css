@@ -1,9 +1,21 @@
+/* COMMON */
 body {
 	color: #333;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.4;
 	font-family: 'Nanum Gothic', sans-serif;
+}
+img{
+	display:block;
+}
+a{
+	text-decoration:none;
+}
+.inner{
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
 }
 
 /* HEADER */
@@ -13,11 +25,9 @@ header {
 }
 
 /* INNNER */
-header .inner {
-	width: 1100px;
+/* >는 자식 요소를 의미함 */
+header > .inner {
 	height: 120px;
-	margin: 0 auto;
-	position: relative;
 }
 
 header .logo {
@@ -67,6 +77,7 @@ header .sub-menu ul.menu li a {
 	color: #656565;
 }
 
+/* haover: 마우스 갖다대면 발생하는 이벤트 */
 header .sub-menu ul.menu li a:hover {
 	color: #000;
 }
@@ -108,26 +119,47 @@ header .sub-menu .search .material-icons {
 header .sub-menu .search.focused .material-icons {
 	opacity: 0;
 }
-header .main-menu{
+
+header .main-menu {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index:1;
+	z-index: 1;
 	display: flex;
 
 }
-header .main-menu .item{
 
-}
-header .main-menu .item .item__name{
+header .main-menu .item {}
+
+header .main-menu .item .item__name {
 	padding: 10px 20px 34px 20px;
 	font-family: Arial, sans-serif;
 	font-size: 13px
 }
-header .main-menu .item:hover .item__name{
+
+/* haover: 마우스 갖다대면 발생 이벤트 */
+header .main-menu .item:hover .item__name {
 	background-color: #2c2a29;
-	color:#669900;
+	color: #669900;
 	border-radius: 6px 6px 0 0;
 }
-header .main-menu .item .item__contents{
+
+header .main-menu .item .item__contents {
+	width: 100%;
+	position:fixed;
+	left:0;
+	display: none;
+}
+header .main-menu .item:hover .item__contents {
+	display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+	background-color: red;
+	height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+	background-color: orange;
+	height: 100px;
 }
