@@ -24,23 +24,26 @@
 	<link rel="icon" href="./favicon.png" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 	<link rel="stylesheet" href="./css/main.css" />
+
+	<script defer src="./js/main.js"></script>
 </head>
 
 <body>
 	<!-- HEADDER -->
 	<header>
 		<div class="inner">
+			<!-- LOGO -->
 			<a href="/" class="logo">
 				<img src="./images/starbucks_logo.png" alt="STARBUCKS">
 			</a>
+			<!-- SUBMENU -->
 			<div class="sub-menu">
 				<ul class="menu">
 					<li>
-						<a href="javascript:void(0)">Sign In</a>
+						<a href="/signin">Sign In</a>
 					</li>
 					<li>
 						<a href="javascript:void(0)">My Starbucks</a>
@@ -52,11 +55,40 @@
 						<a href="javascript:void(0)">Find a Store</a>
 					</li>
 				</ul>
+				<!-- SEARCH -->
 				<div class="search">
-					<input type="text">
-					<div class="material-icons">search</div>
+					<input type="text" />
+					<span class="material-icons">search</span>
 				</div>
 			</div>
+			<ul class="main-menu">
+				<li class="item">
+					<div class="item__name">COFFEE</div>
+					<div class="item__contents">
+
+					</div>
+				</li>
+				<li class="item">
+					<div class="item__name">MENU</div>
+					<div class="item__contents"></div>
+				</li>
+				<li class="item">
+					<div class="item__name">STORE</div>
+					<div class="item__contents"></div>
+				</li>
+				<li class="item">
+					<div class="item__name">RESPONSIBILITY</div>
+					<div class="item__contents"></div>
+				</li>
+				<li class="item">
+					<div class="item__name">MY STARBUCKS REWARDS</div>
+					<div class="item__contents"></div>
+				</li>
+				<li class="item">
+					<div class="item__name">WHAT'S NEW</div>
+					<div class="item__contents"></div>
+				</li>
+			</ul>
 		</div>
 	</header>
 </body>
