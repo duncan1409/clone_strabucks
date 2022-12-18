@@ -16,3 +16,23 @@ searchInputEl.addEventListener('blur', function () {
 	searchInputEl.setAttribute('placeholder', '');
 });
 
+const badgeEl = document.querySelector('header .badges');
+
+//_.throttle(함수, 시간)
+//gsap
+window.addEventListener('scroll', _.throttle(function(){
+	console.log(window.scrollY);
+	if(window.scrollY>500){
+		//Badge 숨기기
+		gsap.to(badgeEl, .3, {
+			opacity: 0,
+			display: 'none'
+		});
+	}else{
+		//Badge 보이기
+		gsap.to(badgeEl, .3, {
+			opacity: 1,
+			display: 'block'
+		});
+	}
+}, 300));
